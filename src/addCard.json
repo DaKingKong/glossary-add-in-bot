@@ -1,0 +1,40 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "id": "name",
+            "type": "Input.Text",
+            "placeholder": "Glossary Name",
+            "isRequired": true,
+            "label": "Name"
+        },
+        {
+            "id": "description",
+            "type": "Input.Text",
+            "placeholder": "Glossary Description",
+            "isRequired": true,
+            "label": "Description"
+        },
+        {
+            "id": "reference",
+            "type": "Input.Text",
+            "placeholder": "Glossary Reference Link (Optional)",
+            "label": "Reference"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Add",
+                    "data" : {
+                        "botId" : "${botId}",
+                        "groupId" : "${groupId}"
+                    }
+                }
+            ]
+        }
+    ]
+}
